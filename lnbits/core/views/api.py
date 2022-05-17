@@ -408,7 +408,7 @@ async def api_lnurlscan(code: str):
         if len(name_domain) == 2 and len(name_domain[1].split(".")) == 2:
             name, domain = name_domain
             url = (
-                ("http://" if domain.endswith(".onion") else "https://")
+                ("https://" if domain.endswith(".onion") else "https://")
                 + domain
                 + "/.well-known/lnurlp/"
                 + name

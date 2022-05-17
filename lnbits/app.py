@@ -52,7 +52,7 @@ def create_app(config_object="lnbits.settings") -> FastAPI:
     )
 
     g().config = lnbits.settings
-    g().base_url = f"http://{lnbits.settings.HOST}:{lnbits.settings.PORT}"
+    g().base_url = f"https://{lnbits.settings.HOST}:{lnbits.settings.PORT}"
 
     @app.exception_handler(RequestValidationError)
     async def validation_exception_handler(
